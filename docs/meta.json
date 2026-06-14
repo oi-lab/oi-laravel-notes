@@ -1,0 +1,7 @@
+{
+    "type": "package",
+    "name": "oi-lab/oi-laravel-notes",
+    "title": "OI Laravel Notes",
+    "description": "Polymorphic notes with attachments for Laravel",
+    "order": 30
+}
