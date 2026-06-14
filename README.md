@@ -180,3 +180,18 @@ composer test
 ## License
 
 The MIT License (MIT). Please see the [License File](LICENSE) for more information.
+
+## Credits
+
+**[Olivier Lacombe](https://www.olacombe.com)** - Creator and maintainer
+
+Olivier is a Product & Technology Director based in Montpellier, France, with over 20 years of experience innovating in UX/UI and emerging technologies. He specializes in guiding enterprises toward cutting-edge digital solutions, combining user-centered design with continuous optimization and artificial intelligence integration.
+
+**Projects & Resources:**
+- [OI Dev Docs](https://dev.olacombe.com) - Documentation for all Open Source OI Lab packages
+- [OnAI](https://onai.olacombe.com) - Training courses and masterclasses on generative AI for businesses
+- [Promptr](https://promptr.olacombe.com) - Prompt engineering Management Platform
+
+## Support
+
+For support, please open an issue on the [GitHub repository](https://github.com/oi-lab/oi-laravel-attachments/issues).
