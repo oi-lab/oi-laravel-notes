@@ -6,17 +6,37 @@ use Illuminate\Console\Command;
 
 class InstallAiSkillCommand extends Command
 {
-    protected $signature = 'oi:install-ai-skill';
+    protected $signature = 'oi-notes:install-ai-skill';
 
-    protected $description = 'Install AI assistant skill files for oi-laravel-notes into the project';
+    protected $description = '[Deprecated] Use `oi:skills` instead. Install AI assistant skill files for oi-laravel-notes';
 
-    public function handle(): void
+    private const SKILL_NAME = 'oilab-laravel-notes';
+
+    private const SECTION = 'oi-lab/oi-laravel-notes rules';
+
+    public function handle(): int
+    {
+        $this->warn('`'.$this->getName().'` is deprecated. Use `php artisan oi:skills` (from oi-lab/oi-laravel-development) instead.');
+
+        if ($this->getApplication()->has('oi:skills')) {
+            return $this->call('oi:skills', [
+                'skills' => [self::SKILL_NAME],
+                '--project' => true,
+            ]);
+        }
+
+        $this->installFallback();
+
+        return self::SUCCESS;
+    }
+
+    private function installFallback(): void
     {
         $stub = __DIR__.'/../../../resources/stubs/ai-skill.md';
 
         $skillDirs = [
-            '.claude/skills/oilab-laravel-notes',
-            '.junie/skills/oilab-laravel-notes',
+            '.claude/skills/'.self::SKILL_NAME,
+            '.junie/skills/'.self::SKILL_NAME,
         ];
 
         foreach ($skillDirs as $dir) {
@@ -36,7 +56,7 @@ class InstallAiSkillCommand extends Command
     private function addSkillToClaudeMd(): void
     {
         $claudeMdPath = base_path('CLAUDE.md');
-        $sectionHeader = '=== oi-lab/oi-laravel-notes rules ===';
+        $sectionHeader = '=== '.self::SECTION.' ===';
         $body = file_get_contents(__DIR__.'/../../../resources/stubs/claude-rules.md');
         $newSection = $sectionHeader."\n\n".trim($body)."\n";
 

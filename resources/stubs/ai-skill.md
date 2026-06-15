@@ -99,5 +99,5 @@ never reference `Note::class` directly, so host-app overrides keep working.
 After updating this package, re-install the skill files:
 
 ```bash
-php artisan oi:install-ai-skill
+php artisan oi:skills
 ```

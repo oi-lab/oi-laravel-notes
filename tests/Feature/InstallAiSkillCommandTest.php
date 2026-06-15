@@ -11,7 +11,7 @@ it('installs skill files and a CLAUDE.md rules section', function () {
     File::deleteDirectory(base_path('.claude'));
     File::deleteDirectory(base_path('.junie'));
 
-    $this->artisan('oi:install-ai-skill')->assertSuccessful();
+    $this->artisan('oi-notes:install-ai-skill')->assertSuccessful();
 
     expect(File::exists(base_path('.claude/skills/oilab-laravel-notes/SKILL.md')))->toBeTrue()
         ->and(File::exists(base_path('.junie/skills/oilab-laravel-notes/SKILL.md')))->toBeTrue()
@@ -21,8 +21,8 @@ it('installs skill files and a CLAUDE.md rules section', function () {
 it('does not duplicate the rules section on re-run', function () {
     File::delete(base_path('CLAUDE.md'));
 
-    $this->artisan('oi:install-ai-skill')->assertSuccessful();
-    $this->artisan('oi:install-ai-skill')->assertSuccessful();
+    $this->artisan('oi-notes:install-ai-skill')->assertSuccessful();
+    $this->artisan('oi-notes:install-ai-skill')->assertSuccessful();
 
     $occurrences = substr_count(
         File::get(base_path('CLAUDE.md')),

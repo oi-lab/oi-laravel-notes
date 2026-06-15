@@ -168,7 +168,7 @@ Resolve models through `OiNotes` so your overrides apply everywhere:
 Install Claude Code / JetBrains Junie skill files and a `CLAUDE.md` rules section into your app:
 
 ```bash
-php artisan oi:install-ai-skill
+php artisan oi:skills
 ```
 
 ## Testing

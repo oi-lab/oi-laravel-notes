@@ -48,6 +48,17 @@
             "providers": [
                 "OiLab\\OiLaravelNotes\\OiLaravelNotesServiceProvider"
             ]
+        },
+        "oi-lab": {
+            "skills": [
+                {
+                    "name": "oilab-laravel-notes",
+                    "description": "Polymorphic notes for Eloquent models",
+                    "path": "resources/stubs/ai-skill.md",
+                    "rules": "resources/stubs/claude-rules.md",
+                    "section": "oi-lab/oi-laravel-notes rules"
+                }
+            ]
         }
     },
     "scripts": {
