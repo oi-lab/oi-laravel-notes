@@ -4,6 +4,11 @@ All notable changes to `oi-laravel-notes` will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-06-15
+
+### Fixed
+- **Documentation import**: Removed `/docs export-ignore` from `.gitattributes` so the `docs/` folder ships with the Composer dist. Previously the package was invisible to `oi-laravel-documentation`'s `doc:import` command because `docs/meta.json` was stripped from tagged releases.
+
 ### Changed
 - **AI Assistant Skills**: The skill install command was renamed to `oi-notes:install-ai-skill` and is now **deprecated** in favor of the unified `php artisan oi:skills` command (provided by `oi-lab/oi-laravel-development`), which discovers and installs skills from all installed `oi-lab/*` packages.
 
