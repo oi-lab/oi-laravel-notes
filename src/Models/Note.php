@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use OiLab\OiLaravelAttachments\Concerns\HasAttachments;
+use OiLab\OiLaravelNotes\Data\NoteData;
 use OiLab\OiLaravelNotes\Database\Factories\NoteFactory;
 use OiLab\OiLaravelNotes\Observers\NoteObserver;
 use OiLab\OiLaravelNotes\OiNotes;
@@ -69,6 +70,14 @@ class Note extends Model
     protected static function newFactory(): Factory
     {
         return NoteFactory::new();
+    }
+
+    /**
+     * Get a data transfer object representing this note.
+     */
+    public function toData(): NoteData
+    {
+        return NoteData::from($this->toArray());
     }
 
     /**
