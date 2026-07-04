@@ -1,11 +1,11 @@
 <img src="./assets/github-preview.png" alt="OI Laravel Notes" width="100%" />
 
-# OI Laravel Notes BETA
-
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/oi-lab/oi-laravel-notes.svg)](https://packagist.org/packages/oi-lab/oi-laravel-notes)
 [![Total Downloads](https://img.shields.io/packagist/dt/oi-lab/oi-laravel-notes.svg)](https://packagist.org/packages/oi-lab/oi-laravel-notes)
 [![Tests](https://img.shields.io/github/actions/workflow/status/oi-lab/oi-laravel-notes/tests.yml?label=tests)](https://github.com/oi-lab/oi-laravel-notes/actions)
 [![License](https://img.shields.io/github/license/oi-lab/oi-laravel-notes)](LICENSE)
+
+# OI Laravel Notes
 
 A Laravel package for polymorphic notes. Attach notes to **any** Eloquent model, author them with a user,
 flag machine-generated notes, and attach files to them — built on top of `oi-laravel-attachments`.
