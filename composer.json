@@ -69,18 +69,6 @@
             "@php scripts/sync-ai-skills.php"
         ]
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../oi-laravel-attachments",
-            "options": {
-                "symlink": true,
-                "versions": {
-                    "oi-lab/oi-laravel-attachments": "1.0.3"
-                }
-            }
-        }
-    ],
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
